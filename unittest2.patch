@@ -1,0 +1,24 @@
+just use python 2.7 as dependency not to require unittest2 backport
+
+--- circus-0.6.0/circus/tests/support.py~	2012-12-17 10:32:38.000000000 +0200
++++ circus-0.6.0/circus/tests/support.py	2013-03-09 14:53:09.604127893 +0200
+@@ -6,7 +6,7 @@
+ import cProfile
+ import pstats
+ 
+-import unittest2 as unittest
++import unittest
+ 
+ from circus import get_arbiter
+ from circus.util import DEFAULT_ENDPOINT_STATS
+--- circus-0.6.0/setup.py~	2012-11-20 13:23:11.000000000 +0200
++++ circus-0.6.0/setup.py	2013-03-09 14:54:31.667912200 +0200
+@@ -40,7 +40,7 @@
+           "License :: OSI Approved :: Apache Software License",
+           "Development Status :: 3 - Alpha"],
+       install_requires=install_requires,
+-      tests_require=['webtest', 'unittest2'],
++      tests_require=['webtest'],
+       test_suite='circus.tests',
+       entry_points="""
+       [console_scripts]
