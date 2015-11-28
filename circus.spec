@@ -43,16 +43,13 @@ Circus can be used as a library or through the command line.
 %patch0 -p1
 
 %build
-%{__python} setup.py build
+%py_build
 
 %{?with_tests:%{__python} setup.py test}
 
 %install
 rm -rf $RPM_BUILD_ROOT
-%{__python} setup.py install \
-	--skip-build \
-	--optimize=2 \
-	--root=$RPM_BUILD_ROOT
+%py_install
 
 %{__rm} -r $RPM_BUILD_ROOT%{py_sitescriptdir}/%{name}/tests
 
