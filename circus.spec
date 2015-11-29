@@ -19,7 +19,7 @@ BuildRequires:	python-devel
 BuildRequires:	python-distribute
 BuildRequires:	python-modules >= 1:2.7
 BuildRequires:	rpm-pythonprov
-BuildRequires:	rpmbuild(macros) >= 1.219
+BuildRequires:	rpmbuild(macros) >= 1.710
 %if %{with tests}
 BuildRequires:	python-iowait >= 0.1
 BuildRequires:	python-psutil >= 0.6.1
