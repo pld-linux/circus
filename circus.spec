@@ -40,7 +40,7 @@ Circus can be used as a library or through the command line.
 
 %prep
 %setup -q
-%patch0 -p1
+%patch -P0 -p1
 
 %build
 %py_build
